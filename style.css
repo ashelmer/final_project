@@ -1,0 +1,357 @@
+* {
+
+	margin: 0;
+   
+	padding: 0;
+   
+	box-sizing: border-box;
+   
+   }
+   
+   body {
+   
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+   
+   }
+   
+   a {
+   
+	text-decoration: none;
+   
+   }
+   
+   li {
+   
+	list-style: none;
+   
+   }
+
+   .navbar {
+
+	display: flex;
+   
+	align-items: center;
+   
+	justify-content: space-between;
+   
+	padding: 20px;
+   
+	background-color:cadetblue;
+   
+	color: #fff;
+   
+   }
+   
+   .nav-links a {
+   
+	color: #fff;
+   
+   }
+   
+   /* LOGO */
+   
+   .logo {
+   
+	font-size: 32px;
+   
+   }
+   
+   /* NAVBAR MENU */
+   
+   .menu {
+   
+	display: flex;
+   
+	gap: 1em;
+   
+	font-size: 18px;
+   
+   }
+   
+   .menu li:hover {
+   
+	background-color:cadetblue;
+   
+	border-radius: 5px;
+   
+	transition: 0.3s ease;
+   
+   }
+   
+   .menu li {
+   
+	padding: 5px 14px;
+   
+   }
+   
+   /* DROPDOWN MENU */
+   
+   .services {
+   
+	position: relative; 
+   
+   }
+   
+   .dropdown {
+   
+	background-color:cadetblue;
+   
+	padding: 1em 0;
+   
+	position: absolute; /*WITH RESPECT TO PARENT*/
+   
+	display: none;
+   
+	border-radius: 8px;
+   
+	top: 35px;
+   
+   }
+   
+   .dropdown li + li {
+   
+	margin-top: 10px;
+   
+   }
+   
+   .dropdown li {
+   
+	padding: 0.5em 1em;
+   
+	width: 8em;
+   
+	text-align: center;
+   
+   }
+   
+   .dropdown li:hover {
+   
+	background-color:cadetblue;
+   
+   }
+   
+   .services:hover .dropdown {
+   
+	display: block;
+   
+   }
+
+   /*RESPONSIVE NAVBAR MENU STARTS*/
+
+/* CHECKBOX HACK */
+
+input[type=checkbox]{
+
+	display: none;
+   
+   } 
+   
+   /*HAMBURGER MENU*/
+   
+   .hamburger {
+   
+	display: none;
+   
+	font-size: 24px;
+   
+	user-select: none;
+   
+   }
+   
+   /* APPLYING MEDIA QUERIES */
+   
+   @media (max-width: 768px) {
+   
+   .menu { 
+   
+	display:none;
+   
+	position: absolute;
+   
+	background-color:cadetblue;
+   
+	right: 0;
+   
+	left: 0;
+   
+	text-align: center;
+   
+	padding: 16px 0;
+   
+   }
+   
+   .menu li:hover {
+   
+	display: inline-block;
+   
+	background-color:cadetblue;
+   
+	transition: 0.3s ease;
+   
+   }
+   
+   .menu li + li {
+   
+	margin-top: 12px;
+   
+   }
+   
+   input[type=checkbox]:checked ~ .menu{
+   
+	display: block;
+   
+   }
+   
+   .hamburger {
+   
+	display: block;
+   
+   }
+   
+   .dropdown {
+   
+	left: 50%;
+   
+	top: 30px;
+   
+	transform: translateX(35%);
+   
+   }
+   
+   .dropdown li:hover {
+   
+	background-color:cadetblue;
+   
+   }
+   
+   }
+
+   .intro{
+	font-size: 18px;
+	padding: 30px 10px 30px 30px;
+   }
+
+   .desc{
+	padding-bottom: 20px;
+   }
+
+   dt{
+	padding-bottom: 5px;
+	font-size: 20px;
+	color: cadetblue;
+   }
+
+   .grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding: 10px;
+  }
+  .grid-item {
+	padding: 20px 10 10px 20px 10px;
+	font-size: 30px;
+	text-align: center;
+  }
+
+  a:link, a:visited {
+	background-color: white;
+	color: black;
+	border: 2px solid cadetblue;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+  }
+  
+  a:hover, a:active {
+	background-color:cadetblue;
+	color: white;
+  }
+
+  footer{
+	font-size: 12px;
+	text-align: center;
+	position:fixed;bottom:0;left:0;right:0;height:30px;
+	
+  }
+
+  header{   
+	margin: 20px;
+	text-align: center;
+	border: 2px cadetblue dotted;
+	border-radius: 20px;
+  }
+
+  h2{
+	padding: 20px 20px;
+	font-style: italic;
+  }
+
+  p{
+	padding: 0px 20px 20px 20px;
+  }
+  
+  blockquote{
+	padding: 0px 20px 20px 20px;
+  }
+
+  figure {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 10px;
+  }
+  
+  img {
+	max-width: 100%;
+  }
+  
+  figcaption {
+	align-self: flex;
+	text-align: left;
+	font-size: 22px;
+	font-style: italic;
+	line-height: 1.5;
+	color: #777;
+	
+	/*adjust this to control how far it should be from egde*/
+  }
+
+  h3{
+	margin: 0px 20px;
+	font-family: "Open+Sans:wght@300;400&display=swap";
+  }
+
+  table {
+	margin: auto;
+	border: thin solid black;
+	caption-side: bottom;
+	border-spacing: 0px;
+	line-height: 20px;
+  }
+  
+  td, th{
+	border: thin dotted gray;
+	padding: 5px;
+  }
+
+  .center{
+	text-align: center;
+  }
+  
+  .right{
+	text-align: right;
+  }
+  
+  .cellcolor{
+	background-color:cadetblue;
+	color:  white;
+  }
+  
+  th{
+	background-color:darkcyan;
+	color: white;
+  }
+
+  body{
+	background-image: url(img/hexagon.webp);
+  }
